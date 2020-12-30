@@ -14,7 +14,7 @@ class NodeType(enum.Enum):
 
 
 class Node:
-    def __init__(self, x: int, y, g=sys.maxsize, h=sys.maxsize):
+    def __init__(self, x: int, y, g=sys.maxsize, h=0):
         self.x = x
         self.y = y
         self.type = NodeType.NORMAL

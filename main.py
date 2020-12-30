@@ -9,7 +9,7 @@ WINDOW_HEIGHT = 800
 WINDOW_WIDTH = 800
 BLOCK_SIZE = 20
 SCREEN = pygame.display.set_mode((WINDOW_WIDTH, WINDOW_HEIGHT))
-pygame.display.set_caption("Path Finding Algorithm")
+pygame.display.set_caption("Dijkstra Algorithm")
 GRID = Grid(40)
 SOURCE = False
 SINK = False

@@ -31,8 +31,8 @@ class Grid:
 
         for x_direction in direction:
             for y_direction in direction:
-                if x_direction == 0 and y_direction == 0 or \
-                        x_direction != 0 and y_direction != 0:
+                if x_direction == 0 and y_direction == 0: # \
+                        # or x_direction != 0 and y_direction != 0:
                     continue
 
                 x_new = current_node.x + x_direction
@@ -129,7 +129,6 @@ class Grid:
                 node_queue.add(neighbor)
 
             draw()
-            time.sleep(0.02)
 
     def dijkstra(self, draw):
         visited = []
@@ -152,6 +151,8 @@ class Grid:
             self.make_visited(current_node.x, current_node.y)
 
             if current_node.x == self.sink.x and current_node.y == self.sink.y:
+                self.make_path()
+                draw()
                 break
 
             neighbors = self.get_neighbor(current_node)
@@ -168,7 +169,6 @@ class Grid:
                 node_queue.add(neighbor)
 
             draw()
-            time.sleep(0.02)
 
     def __repr__(self):
         grid_representation = ""
